@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mapa.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/padrao.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='img/viverbem.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <title>Viver Bem | Mapa da Cidade</title>
+</head>
+<body>
+    <header>
+        <div class="header_box">
+            <div class="header_box__titulo">
+                <a href="{{ url_for('index') }}"><h1>Viver Bem</h1></a>
+            </div>
+            <div class="header_box__nav">
+                <nav>
+                    <ul>
+                        <li><a href="{{ url_for('index') }}">Home</a></li>
+                        <li><a href="{{ url_for('mapa') }}" style="color: var(--vermelho); font-weight: bold;">Mapa da cidade</a></li>
+                        <li><a href="{{ url_for('mapa') }}#tel_uteis">Tel. Úteis</a></li>
+                        <li><a href="{{ url_for('parceiros') }}">Parcerias</a></li>
+                        <li><a href="{{ url_for('sobre') }}">Sobre Nós</a></li>
+                        <li><a href="{{ url_for('contato') }}">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section id="mapa">
+        <div id="map"></div>
+    </section>
+    <section id="legendas">
+        <h2>Legendas</h2>
+        <div class="legendas_container">
+            <div class="legenda-bombeiro">
+                <img src="{{ url_for('static', filename='img/legenda-vermelha.png') }}" alt="Marcação Corpo de Bombeiro">
+                <span>Corpo de Bombeiros</span>
+            </div>
+            <div class="legenda_policia-civil">
+                <img src="{{ url_for('static', filename='img/legenda-preta.png') }}" alt="Marcação Policia Cívil">
+                <span>Polícia Civil</span>
+            </div>
+            <div class="legenda-pmerj">
+                <img src="{{ url_for('static', filename='img/legenda-azul.png') }}" alt="Marcação PMERJ">
+                <span>PMERJ</span>
+            </div>
+            <div class="legenda-defesa-civil">
+                <img src="{{ url_for('static', filename='img/legenda-laranja.png') }}" alt="Marcação Defesa Cívil">
+                <span>Defesa Cívil</span>
+            </div>
+            <div class="legenda-vigilancia-sanitaria">
+                <img src="{{ url_for('static', filename='img/legenda-verde.png') }}" alt="Marcação Vigilância Sanitária">
+                <span>Vigilância Sanitária</span>
+            </div>
+            <div class="legenda-procon">
+                <img src="{{ url_for('static', filename='img/legenda-roxa.png') }}" alt="Marcação Procon">
+                <span>Procon</span>
+            </div>
+        </div>
+    </section>
+    <section id="tel_uteis">
+        <h2>Telefones Úteis</h2>
+        <div class="tel_uteis__civil">
+            <h4>Delegacias da Polícia Civil em Niterói</h5>
+            <div class="civil_telefone">
+                <span>76ª DP - (21) 2719-3220</span>
+                <span>77ª DP - (21) 2719-3220</span>
+                <span>78ª DP - (21) 2719-3220</span>
+                <span>81ª DP - (21) 2719-3220</span>
+            </div>
+        </div>
+        <div class="tel_uteis__pmerj">
+            <h4>PMERJ</h5>
+            <div class="pmerj_telefone">
+                <span>Central de Atendimento: 190</span>
+                <span>12ºBPM – Niterói / Maricá - (21) 2717-7787</span>
+            </div>
+        </div>
+        <div class="tel_uteis__bombeiro">
+            <h4>Corpo de Bombeiros – Niterói</h5>
+            <div class="bombeiro_telefone">
+                <span>Central de Atendimento: 193</span>
+                <div class="bombeiro_telefone2">
+                    <span>3º GBM - (21) 2717-6849</span>
+                    <span>Charitas – DBM 1/3º - (21) 98596-9425</span>
+                </div>
+            </div>
+        </div>
+        <div class="tel_uteis__defesa-civil">
+            <h4>Defesa Civil de Niterói</h5>
+            <div class="defesa-civil_contato">
+                <span>Central de Atendimento: 199</span>
+                <span>Telefones: (21) 2717-2631 e (21) 2620-0199</span>
+                <span>E-mail: ssdcnit@hotmail.com</span>
+            </div>
+        </div>
+        <div class="tel_uteis__vigilancia-sanitaria">
+            <h4>Vigilância Sanitária de Niterói</h5>
+            <div class="vigilancia-sanitaria_contato">
+                <span>Telefones: (21) 2613-6850</span>
+                <span>E-mail: ssdcnit@hotmail.com</span>
+            </div>
+        </div>
+        <div class="tel_uteis__procon">
+            <h4>Procon Niterói</h5>
+            <span>Telefone: (21) 2719-5177</span>
+        </div>
+    </section>
+    <footer>
+        <div class="footer_container">
+            <div class="footer_logo">
+                <img src="{{ url_for('static', filename='img/viverbem-logo.png') }}" alt="Logo do Viver Bem">
+                <div class="footer_logo__social">
+                    <a href="https://www.youtube.com/@AlertaViverBem" target="_blank"><img src="{{ url_for('static', filename='img/youtube2.png') }}" alt="Logo do YouTube"></a>
+                    <a href="https://x.com/ViverBemOrg" target="_blank"><img src="{{ url_for('static', filename='img/x.png') }}" alt="Logo do X"></a>
+                    <a href="https://www.facebook.com/alertaviverbem/" target="_blank"><img src="{{ url_for('static', filename='img/facebook2.png') }}" alt="Logo do Facebook"></a>
+                    <a href="https://www.instagram.com/alertaviverbem?igsh=MWQ0aWE5eGhhZnF3dg==" target="_blank"><img src="{{ url_for('static', filename='img/instagram2.png') }}" alt="Logo do Instagram"></a>
+                </div>
+            </div>
+            <div class="footer_viver-bem">
+                <h1>Viver Bem</h1>
+                <ul>
+                    <a href="{{ url_for('sobre') }}#sobre-nos"><li>Quem somos</li></a>
+                    <a href="{{ url_for('sobre') }}#viver-bem-midia"><li>Viver bem na mídia</li></a>
+                    <a href="{{ url_for('parceiros') }}"><li>Parcerias</li></a>
+                    <a href="{{ url_for('contato') }}"><li>Contato</li></a>
+                </ul>
+            </div>
+            <div class="footer_ferramentas">
+                <span>Ferramentas</span>
+                <ul>
+                    <a href="{{ url_for('mapa') }}"><li>Mapa da cidade</li></a>
+                    <a href="{{ url_for('mapa') }}#tel_uteis"><li>Tel. Úteis</li></a>
+                </ul>
+            </div>
+            <div class="footer_social">
+                <span>Social</span>
+                <ul>
+                    <li><a href="https://www.facebook.com.com/alertaviverbem/" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/alertaviverbem?igsh=MWQ0aWE5eGhhZnF3dg==" target="_blank">Instagram</a></li>
+                    <li><a href="https://x.com/ViverBemOrg" target="_blank">Twitter</a></li>
+                    <li><a href="https://www.youtube.com/@AlertaViverBem" target="_blank">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer_copyright">
+            <span>©️ Copyright Viver Bem</span>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="{{ url_for('static', filename='js/script2.js') }}"></script>
+</body>
+</html>

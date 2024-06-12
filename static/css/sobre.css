@@ -1,0 +1,83 @@
+#sobre-nos h2 {
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--cinza-claro);
+}
+
+.sobre-nos_container h4 {
+    font-size: 20px;
+    margin: 15px 0px;
+}
+
+.sobre-nos_container p {
+    text-align: justify;
+}
+
+#viver-bem-midia h2{
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--cinza-claro);
+}
+
+.viver-bem-midia_container__videos {
+    display: flex;
+    gap: 10%;
+    margin: 30px 0px 60px 0px;
+}
+
+.viver-bem-midia_container iframe, .midia_container__direita iframe {
+    margin: 15px 0px;
+}
+
+.viver-bem-midia_container span, .midia_container__direita span {
+    font-weight: 600;
+}
+
+.midia_container__esquerda, .midia_container__direita {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Midias da Esquerda */
+
+.midia-band {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.midia-extra {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.midia-extra img {
+    width: 576px;
+    height: 300px;
+}
+
+.midia-extra a {
+    width: fit-content;
+    border-bottom: 1px solid red;
+    padding-bottom: 2px;
+    font-weight: bold;
+}
+
+/* Midias da Direita */
+
+.midia-balanco-geral {
+    display: flex;
+    flex-direction: column;
+}
+
+.midia-bom-dia-rio {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.midia-tvflu {
+    margin-top: 17px;
+}

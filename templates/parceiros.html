@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/parceiros.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/padrao.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='img/viverbem.ico') }}" type="image/x-icon">
+    <title>Viver Bem | Parcerias</title>
+</head>
+<body>
+<header>
+    <div class="header_box">
+        <div class="header_box__titulo">
+            <a href="home.html"><h1>Viver Bem</h1></a>
+        </div>
+        <div class="header_box__nav">
+            <nav>
+                <ul>
+                        <li><a href="{{ url_for('index') }}">Home</a></li>
+                        <li><a href="{{ url_for('mapa') }}" >Mapa da cidade</a></li>
+                        <li><a href="{{ url_for('mapa') }}#tel_uteis">Tel. Úteis</a></li>
+                        <li><a href="{{ url_for('parceiros') }}" style="color: var(--vermelho); font-weight: bold;">Parcerias</a></li>
+                        <li><a href="{{ url_for('sobre') }}">Sobre Nós</a></li>
+                        <li><a href="{{ url_for('contato') }}">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<section id="parcerias">
+    <div class="parcerias_container">
+        <div class="parcerias_header">
+            <p>A Associação ViverBem possui parceria com diversas empresas públicas e privadas que colaboram para o crescimento de nosso trabalho.</p>
+            <span>Ajude a ViverBem, seja um parceiro!</span>
+        </div>
+        <div class="parcerias_niteroi-rotativo">
+            <div class="niteroi-rotativo_logo">
+                <img src="{{ url_for('static', filename='img/niteroi-rotativo.png') }}" alt="Logo do Niterói Rotativo">
+            </div>
+            <div class="niteroi-rotativo_txt">
+                <h5>Niterói Rotativo</h5>
+                <p>Uma parceria entre a Associação ViverBem e a Niterói Rotativo irá contribuir para o aumento das áreas monitoradas.</p>
+            </div>
+        </div>
+        <div class="parcerias_uff">
+            <div class="uff_logo">
+                <img src="{{ url_for('static', filename='img/uff.png') }}" alt="Logo da Faculdade UFF">
+            </div>
+            <div class="uff_txt">
+                <h5>Universidade federal Fluminense</h5>
+                <p>A associação Viver Bem e a Universidade Federal Fluminense (UFF) firmaram uma parceria no último dia 30 de junho no intuito de informar e melhorar a qualidade de vida da população de Niterói em relação a segurança pública. O acerto consiste em que alunos da universidade, especificamente do curso de Segurança Pública e Social, estarão estagiando na associação e estudando os mais diversos protocolos, e em seguida, passado à população o passo-a-passo da ação, de acordo com a demanda.</p>
+            </div>
+        </div>
+        <div class="parcerias_nittrans">
+            <div class="nittrans_logo">
+                <img src="{{ url_for('static', filename='img/nittrans-logo.png') }}" alt="Logo da NitTrans">
+            </div>
+            <div class="nittrans_txt">
+                <h5>NitTrans</h5>
+                <p>A NitTrans – Niterói Transporte e Trânsito – é uma sociedade de economia mista de personalidade jurídica de direito privado criada pela Lei Municipal nº 2.283, de 28 de dezembro de 2005, tendo como acionista majoritário o Município de Niterói. É responsável pelo planejamento e gerenciamento técnico-operacional do sistema de transportes e trânsito e do sistema viário da cidade, em conformidade com as políticas públicas adotadas pelo Governo Municipal. A estrutura organizacional funciona de forma integrada e é composta por técnicos e especialistas nas áreas de engenharia de tráfego, infraestrutura viária e arquitetura urbana. A parceria com a Associação ViverBem funciona no auxílio da ordenação do trânsito. Em nosso Centro de Monitoramento ficam agentes que entram em contato com outros na rua para solucionarem qualquer questão relacionadas ao trânsito.</p>
+            </div>
+        </div>
+        <div class="parcerias_secretaria">
+            <div class="secretaria_logo">
+                <img src="{{ url_for('static', filename='img/sindicato.jpg') }}" alt="Logo do Sindicato das Seguradoras">
+            </div>
+            <div class="secretaria_txt">
+                <h5>Sindicato das Seguradoras</h5>
+                <p>Através da parceria entre a Associação ViverBem e o Sindicato das Seguradoras um reboque é disponibilizado pela Porto Seguro para retirar rapidamente veículos enguiçados de “zonas de perigo”. O Sindicato ainda está investindo capital para ampliação da rede de câmeras instaladas na cidade.</p>
+            </div>
+        </div>
+        <div class="parcerias_secretaria">
+            <div class="secretaria_logo">
+                <img src="{{ url_for('static', filename='img/seop.jpg') }}" alt="Logo da Secretaria Municipal de Niterói de Ordem Pública ">
+            </div>
+            <div class="secretaria_txt">
+                <h5>SEOP</h5>
+                <p>O termo de cooperação  firmado entre a Secretaria de Ordem Pública e a Associação Viver Bem permite que o Centro Integrado de Segurança Pública (Cisp) possa integrar à sua rede de monitoramento mais 160 câmeras de monitoramento sem custo algum para o município. A associação se prontificou a ceder as imagens para a Prefeitura, mas, de acordo com o termo, não terá acesso às câmeras do Cisp.</p>
+            </div>
+        </div>
+        <div class="parcerias_secretaria">
+            <div class="secretaria_logo">
+                <img src="{{ url_for('static', filename='img/Niteroi-Esportes.png') }}" alt="Logo da Secretaria de Esporte e Lazer">
+            </div>
+            <div class="secretaria_txt">
+                <h5>Secretaria de Esporte e Lazer</h5>
+                <p>Secretaria de Esporte e Lazer – A Associação ViverBem incentiva os eventos esportivos realizados na cidade de Niterói.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="footer_container">
+        <div class="footer_logo">
+            <img src="{{ url_for('static', filename='img/viverbem-logo.png') }}" alt="Logo do Viver Bem">
+            <div class="footer_logo__social">
+                <a href="https://www.youtube.com/@AlertaViverBem" target="_blank"><img src="{{ url_for('static', filename='img/youtube2.png') }}" alt="Logo do YouTube"></a>
+                <a href="https://x.com/ViverBemOrg" target="_blank"><img src="{{ url_for('static', filename='img/x.png') }}" alt="Logo do X"></a>
+                <a href="https://www.facebook.com/alertaviverbem/" target="_blank"><img src="{{ url_for('static', filename='img/facebook2.png') }}" alt="Logo do Facebook"></a>
+                <a href="https://www.instagram.com/alertaviverbem?igsh=MWQ0aWE5eGhhZnF3dg==" target="_blank"><img src="{{ url_for('static', filename='img/instagram2.png') }}" alt="Logo do Instagram"></a>
+            </div>
+        </div>
+        <div class="footer_viver-bem">
+            <h1>Viver Bem</h1>
+            <ul>
+                <li><a href="sobre.html#sobre-nos">Quem somos</a></li>
+                <li><a href="sobre.html#viver-bem-midia">Viver bem na mídia</a></li>
+                <li><a href="parceiros.html">Parcerias</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+        <div class="footer_ferramentas">
+            <span>Ferramentas</span>
+            <ul>
+                <li><a href="mapa.html">Mapa da cidade</a></li>
+                <li><a href="mapa.html#tel_uteis">Tel. Úteis</a></li>
+            </ul>
+        </div>
+        <div class="footer_social">
+            <span>Social</span>
+            <ul>
+                <li><a href="https://www.facebook.com/alertaviverbem/" target="_blank">Facebook</a></li>
+                <li><a href="https://www.instagram.com/alertaviverbem?igsh=MWQ0aWE5eGhhZnF3dg==" target="_blank">Instagram</a></li>
+                <li><a href="https://x.com/ViverBemOrg" target="_blank">Twitter</a></li>
+                <li><a href="https://www.youtube.com/@AlertaViverBem" target="_blank">YouTube</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer_copyright">
+        <span>©️ Copyright Viver Bem</span>
+    </div>
+</footer>
+</body>
+</html>

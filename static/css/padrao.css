@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap'); /* font-family: "Inter", sans-serif; */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+    scroll-behavior: smooth;
+}
+:root {
+    --main-cinza: rgba(47, 51, 56, 1);
+    --cinza-escuro: rgba(30, 30, 30, 1);
+    --cinza-claro: rgba(211, 211, 211, 1);
+    --vermelho: rgba(174, 62, 68, 1);
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: rgba(236, 236, 236, 1);
+}
+
+section {
+    margin: auto;
+    width: 1280px;
+    margin-top: 30px;
+}
+
+/* - Cabeçalho - */
+
+header {
+    display: flex;
+    height: 55px;
+    border-bottom: 2px solid var(--cinza-claro);
+}
+
+/* Box do Header */
+
+.header_box {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 1280px;
+}
+
+/* Titulo do Header */
+
+.header_box__titulo {
+    display: flex;
+}
+
+header h1 {
+    margin: auto;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--main-cinza);
+}
+
+/* Barra de Navegação do Header */
+
+.header_box__nav {
+    display: flex;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    height: fit-content;
+    width: fit-content;
+    gap: 40px;
+    margin: auto;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Footer */
+
+footer {
+    margin-top: 50px;
+    width: 100%;
+    height: fit-content;
+    background-color: var(--cinza-escuro);
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.footer_container {
+    display: flex;
+    gap: 30px;
+    width: fit-content;
+    margin: auto;
+    padding: 30px 0px;
+    height: fit-content;
+}
+
+.footer_logo__social {
+    display: flex;
+    gap: 8px;
+}
+
+.footer_logo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: auto;
+}
+
+.footer_ferramentas {
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    padding: 0px 30px;
+}
+
+.footer_viver-bem h1, .footer_container span {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.footer_container ul {
+    margin-top: 10px;
+}
+
+.footer_container li {
+    font-size: 14px;
+    font-weight: 300;
+    padding: 3px 0px;
+}
+
+.footer_viver-bem {
+    padding-left: 30px;
+    border-left: 1px solid white;
+}
+
+.footer_copyright {
+    display: flex;
+    padding: 15px 0px;
+    border-top: 1px solid white;
+}
+
+.footer_copyright span {
+    margin: auto;
+    font-size: 18px;
+    font-weight: 300;
+}

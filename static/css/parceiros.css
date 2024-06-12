@@ -1,0 +1,31 @@
+.parcerias_container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    text-align: justify;
+}
+
+.parcerias_niteroi-rotativo, .parcerias_uff, .parcerias_nittrans, .parcerias_secretaria {
+    display: flex;
+    gap: 50px;
+}
+
+.niteroi-rotativo_logo img, .uff_logo img, .nittrans_logo img, .secretaria_logo img {
+    width: 200px;
+}
+
+.niteroi-rotativo_txt,.uff_txt, .nittrans_txt, .secretaria_txt {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.niteroi-rotativo_txt h5, .uff_txt h5, .nittrans_txt h5, .secretaria_txt h5 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.niteroi-rotativo_txt p, .uff_txt p, .nittrans_txt p, .secretaria_txt p {
+    font-size: 16px;
+    font-weight: 400;
+}
