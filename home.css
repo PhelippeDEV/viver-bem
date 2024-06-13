@@ -1,0 +1,144 @@
+/* - Cabeçalho - */
+
+header {
+    display: flex;
+    height: 55px;
+    border-bottom: 2px solid var(--cinza-claro);
+}
+
+/* Box do Header */
+
+.header_box {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 1280px;
+}
+
+/* Titulo do Header */
+
+.header_box__titulo {
+    display: flex;
+}
+
+header h1 {
+    margin: auto;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--main-cinza);
+}
+
+/* Barra de Navegação do Header */
+
+.header_box__nav {
+    display: flex;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    height: fit-content;
+    width: fit-content;
+    gap: 40px;
+    margin: auto;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* - Banners - */
+
+#banners {
+    display: flex;
+    gap: 10px;
+}
+
+/* Video do Banner */
+
+.banners_video {
+    width: 966px;
+    height: 480px;
+    background-color: var(--main-cinza);
+}
+
+.banners_video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que o vídeo preencha a div mantendo sua proporção */
+}
+
+/* Nóticias do Banner */
+
+.banners_noticias {
+    height: 481px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.banners_noticias__img1 {
+    width: 100%;
+    height: 150px;
+    background-color: var(--main-cinza);
+}
+.banners_noticias__img2 {
+    width: 297px;
+    height: 150px;
+    background-color: var(--main-cinza);
+}
+.banners_noticias__img3 {
+    width: 297px;
+    height: 150px;
+    background-color: var(--main-cinza);
+}
+
+/* - Noticias - */
+
+#noticias {
+    display: flex;
+    flex-direction: column;
+}
+
+#noticias h2 {
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--cinza-claro);
+}
+
+.noticias_grid {
+    display: grid;
+    grid-template-columns: repeat(5, 250px);
+    grid-auto-rows: 285px;
+    gap: 7px;
+    margin: 15px 0px;
+}
+
+.noticia {
+    padding: 10px;
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: inset 0 0 100px 0 rgba(0, 0, 0, 0.5);
+    filter: blur(0);
+    transition: filter 0.3s ease;
+    width: 100%;
+    height: 100%;
+    text-decoration: none; /* Remove underline from text */
+    color: inherit; /* Inherit text color */
+}
+
+.noticia span {
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}   

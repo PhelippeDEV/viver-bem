@@ -1,0 +1,117 @@
+/* Mapa */
+
+#mapa {
+    width: 100%;
+    height: 540px;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+/* Legendas */
+
+#legendas h2 {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--cinza-claro);
+}
+
+.legendas_container {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0px;
+}
+
+.legendas_container > * {
+    display: flex;
+    gap: 20px;
+}
+
+.legendas_container img {
+    width: 20px;
+}
+
+.legendas_container span {
+    margin: auto;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Tel. Úteis */
+
+#tel_uteis {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#tel_uteis h2 {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--cinza-claro);
+}
+
+#tel_uteis h4 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.tel_uteis__civil {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.civil_telefone {
+    display: flex;
+    gap: 30px;
+}
+
+.tel_uteis__pmerj {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.pmerj_telefone {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tel_uteis__bombeiro {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.bombeiro_telefone {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bombeiro_telefone2 {
+    display: flex;
+    gap: 30px;
+}
+
+.defesa-civil_contato {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.vigilancia-sanitaria_contato {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.tel_uteis__procon h4 {
+    margin-bottom: 20px;
+}
